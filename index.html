@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="./src/css/style.css" />
 
     <title>Frontend Mentor | Interactive rating component</title>
 
@@ -26,48 +27,73 @@
     </style>
   </head>
   <body>
-    <!-- Rating state start -->
-    <div class="rating">
-      <div class="rating-icon">
-        <img src="./images/icon-star.svg" alt="icon star" />
+    <main>
+      <div class="none rating">
+        <div class="rating-icon">
+          <img src="./images/icon-star.svg" alt="icon star" />
+        </div>
+        <div class="rating-content">
+          <div class="rating-content-desc">
+            <h1>How did we do?</h1>
+            <p>
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
+          </div>
+          <form>
+            <div class="rating-content-radio">
+              <div class="radio">
+                <input type="radio" value="1" name="rating" id="one" />
+                <label for="one">1</label>
+              </div>
+              <div class="radio">
+                <input type="radio" value="2" name="rating" id="two" />
+                <label for="two">2</label>
+              </div>
+              <div class="radio">
+                <input type="radio" value="3" name="rating" id="three" />
+                <label for="three">3</label>
+              </div>
+              <div class="radio">
+                <input type="radio" value="4" name="rating" id="four" />
+                <label for="four">4</label>
+              </div>
+              <div class="radio">
+                <input type="radio" value="5" name="rating" id="five" />
+                <label for="five">5</label>
+              </div>
+            </div>
+            <div class="rating-content-button">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="rating-content">
-        <div class="rating-content-desc">
-          <h1>How did we do?</h1>
+
+      <!-- Thank you state start -->
+      <div class="thanks">
+        <div class="thanks-img">
+          <img
+            src="./images/illustration-thank-you.svg"
+            alt="thank you illustration"
+          />
           <p>
-            Please let us know how we did with your support request. All
-            feedback is appreciated to help us improve our offering!
+            You selected &nbsp;
+            <!-- Add rating here -->
+            <span class="user-rating"></span>
+            &nbsp; out of 5
           </p>
         </div>
-        <div class="rating-content-radio">1 2 3 4 5</div>
-        <div class="rating-content-button">Submit</div>
+        <div class="thanks-content">
+          <h1>Thank you!</h1>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
       </div>
-    </div>
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-    <div class="thanks">
-      <div class="thanks-img">
-        <img
-          src="./images/illustration-thank-you.svg"
-          alt="thank you illustration"
-        />
-        <p>
-          You selected &nbsp;
-          <!-- Add rating here -->
-          <span class="user-rating"></span>
-          &nbsp; out of 5
-        </p>
-      </div>
-      <div class="thanks-content">
-        <h1>Thank you!</h1>
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don’t hesitate to get in touch!
-        </p>
-      </div>
-    </div>
-    <!-- Thank you state end -->
+      <!-- Thank you state end -->
+    </main>
 
     <div class="attribution">
       Challenge by
