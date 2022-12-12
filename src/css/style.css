@@ -47,14 +47,19 @@ main .rating-content-radio {
   gap: 1rem;
 }
 main .rating-content-radio .radio {
-  background-color: hsl(216deg, 12%, 8%);
-  color: hsl(217deg, 12%, 63%);
-  padding: 1rem;
-  border-radius: 50%;
   display: grid;
   grid-template-columns: 0 1fr;
   justify-items: center;
-  line-height: normal;
+}
+main .rating-content-radio .radio label {
+  background-color: hsl(216deg, 12%, 8%);
+  padding: 1rem;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .rating-content-radio .radio input {
   visibility: hidden;
@@ -107,6 +112,23 @@ main .rating-content-button button {
 
 .none {
   display: none;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    align-items: center;
+  }
+  main {
+    max-width: 30vh;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    align-items: center;
+  }
+  main {
+    max-width: 50vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

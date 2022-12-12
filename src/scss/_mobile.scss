@@ -63,14 +63,22 @@ main {
     gap: 1rem;
 
     .radio {
-      background-color: $neutral-very-dark-blue;
-      color: $neutral-light-grey;
-      padding: 1rem;
-      border-radius: 50%;
       display: grid;
       grid-template-columns: 0 1fr;
       justify-items: center;
-      line-height: normal;
+
+      label {
+        background-color: $neutral-very-dark-blue;
+        padding: 1rem;
+        width: 40%;
+        height: 40%;
+        border-radius: 50%;
+        // vertical-align: middle;
+        // display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
       input {
         visibility: hidden;
