@@ -8,7 +8,6 @@ $neutral-very-dark-blue: hsl(216, 12%, 8%);
 %paragraph {
   color: $neutral-light-grey;
   line-height: 1.625;
-  margin-bottom: 1rem; 
 }
 
 * {
@@ -31,14 +30,15 @@ body {
 }
 
 main {
-  background-color: $neutral-dark-blue;
-  border-radius: 1rem;
+  // background-color: $neutral-dark-blue;
+  background: radial-gradient(at top, hsl(213, 19%, 20%) 0%, $neutral-dark-blue 100%);
+  border-radius: 1.5rem;
   padding: 2rem 1.5rem;
   margin-bottom: 1rem;
 
   .rating-icon {
-    background-color: $neutral-light-grey;
-    padding: .5rem;
+    background-color: hsl(213, 20%, 23%);
+    padding: .8rem;
     display: inline-flex;
     border-radius: 50%;
   }
@@ -54,6 +54,7 @@ main {
 
     p {
       @extend %paragraph;
+      margin-bottom: 1.5rem; 
     }
   }
 
@@ -68,23 +69,26 @@ main {
       justify-items: center;
 
       label {
-        background-color: $neutral-very-dark-blue;
+        background-color: hsl(213, 20%, 23%);
         padding: 1rem;
         width: 40%;
         height: 40%;
         border-radius: 50%;
-        // vertical-align: middle;
-        // display: inline-block;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-weight: 700;
       }
 
       input {
         visibility: hidden;
 
+        &:hover + label {
+          background-color: $neutral-medium-grey;
+        }
+
         &:checked + label {
-          background-color: $neutral-light-grey;
+          background-color: $primary-orange;
         }
       }
 
@@ -96,7 +100,7 @@ main {
 
   .rating-content-button {
     button {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       width: 100%;
       border: none;
       border-radius: 2rem;
