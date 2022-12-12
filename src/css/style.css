@@ -16,7 +16,6 @@ body {
   font-size: 15px;
   background-color: hsl(216deg, 12%, 8%);
   color: hsl(0deg, 0%, 100%);
-  margin: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
